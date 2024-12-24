@@ -21,7 +21,33 @@ ul {
     left: -7%;
     animation: slideIn 1s forwards;
 }
+.menu-home{
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding-top: 60px;
+}
+.menu-home .menu-body{
+    text-align: center;
+}
 
+.menu-home .menu-body li{
+    position: relative;
+    padding: 20px 0;
+}
+.menu-home .menu-body li a span {
+    display: block;
+}
+
+.menu-home .menu-body li a{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    color: #47444E;
+}
 .upload-label {
     width: 100%;
     display: inline-block;
@@ -823,6 +849,7 @@ ul {
         transform: translateX(123px);
         padding-top: 40px;
     }
+
     .slideInMobile{
         animation: slideInMobile 1s forwards !important;
     }

@@ -20,8 +20,6 @@
                         City, Vietnam</p>
                     <p class="phone-number"><span><i class="fas fa-phone"></i> </span><a href="tell:0973454140"> (+84) 973.454.140</a></p>
                     <p class="email"><span><i class="far fa-envelope"></i> </span> <a href="mailto:ai@idai.vn">ai@idai.vn</a></p>
-                    <p><span><i class="fab fa-facebook"></i> </span> <a href="#">ai@idai.vn</a></p>
-                    <p><span><i class="fab fa-telegram"></i> </span> <a href="#">ai@idai.vn</a></p>
                 </div>
                 <div class="col-12 col-md-6">
                     <div class="form-content">

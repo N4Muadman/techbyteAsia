@@ -81,8 +81,7 @@
         </div>
         <div class="menu-footer">
             <div class="social-icon">
-                <a href="https://www.facebook.com/idai.vn"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.youtube.com/@hotrodoan"><i class="fab fa-youtube"></i></a>
+                <a href="https://x.com/techbyte_asia?s=21&t=rSpEJHc1XroM_3581VBCmA"><img src="/assets/images/twitterx.png" width="42px" alt="icon-x"></a>
             </div>
         </div>
     </div>
