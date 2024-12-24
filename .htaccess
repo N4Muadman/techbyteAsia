@@ -1,0 +1,7 @@
+
+## ONEPANEL Force HTTPS by SSL installation
+RewriteEngine On
+RewriteCond %{HTTPS} !=On
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/$1 [L,QSA]
+
