@@ -129,6 +129,27 @@ class RecruitmentController extends Controller
         }
     }
 
+    public function destroyApplication($id){
+        try {
+            $application = Application::findOrFail($id);
+    
+            if ($application->cv_path && file_exists(public_path($application->cv_path))){
+                unlink(public_path($application->cv_path));
+            }
+    
+            $application->delete();
+    
+            return response()->json([
+                'message' => 'Application deleted successfully'
+            ], 200);
+    
+        } catch(\Illuminate\Database\Eloquent\ModelNotFoundException $e) {
+            return response()->json(['message' => 'Application not found'], 404);
+        } catch(\Exception $e) {
+            return response()->json(['error' => $e->getMessage()], 500);
+        }
+    }
+
     public function downloadCv($path){
         $fullPath = public_path($path);
 
@@ -137,5 +158,26 @@ class RecruitmentController extends Controller
         }
 
         return response()->download($fullPath);
+    }
+
+    public function uploadImageDescription(Request $request){
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,webp',
+        ]);
+        
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+
+            $fileName = time() . '_' .$file->getClientOriginalName();
+
+            $path = asset('uploads/cvs/descriptions/' . $fileName);
+            $file->move(public_path('uploads/cvs/descriptions'), $fileName);
+
+            return response()->json([
+                'url' => $path,
+            ]);
+        }
+
+        return response()->json(['error' => 'No file uploaded'], 400);
     }
 }

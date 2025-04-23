@@ -11,15 +11,16 @@
             <div class="title-link"><a href="{{ route('recruitment') }}">Recruitment /</a> <span>Recruitment detail</span></div>
         </div>
         <div class="recruitment-detail-content">
-            <h2>Job Description</h2>
+            <h2>{{$recruitment->position_job}}</h2>
             <div class="row mt-5">
                 <div class="col-12 col-md-8 pe-md-5">
                     <p class="number-of-recruits"><b>Number of recruits: {{ $recruitment->quantity }}</b></p>
                     <p class="number-of-recruits"><b>Expiration date: {{ $recruitment->expiration_date }}</b></p>
+                    <p class="number-of-recruits"><b>{{ $recruitment->application->count() }} applicants have applied</b></p>
                     <div class="description text-white">
                         {!! $recruitment->content !!}
                     </div>
-                    <p class="mt-5 fs-5 text-white"><em><strong>Apply by filling out the application form below or sending an email to: <a href="mailto:admin@hotrodoan.vn">admin@hotrodoan.vn</a></strong></em></p>
+                    <p class="mt-5 fs-5 text-white"><em><strong>Apply by filling out the application form below or sending an email to: <a href="mailto:ai@idai.vn">ai@idai.vn</a></strong></em></p>
                 </div>
                 <div class="col-12 col-md-4 mb-5 mb-md-0">
                     <div class="form-recruit">

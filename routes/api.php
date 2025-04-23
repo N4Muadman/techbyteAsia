@@ -10,4 +10,7 @@ Route::get('/user', function (Request $request) {
 
 Route::resource('recruitments', RecruitmentController::class);
 Route::get('get-cvs/{id}', [RecruitmentController::class, 'getCVofRecruitment']);
-Route::get('download-cv/{path}', [RecruitmentController::class, 'downloadCv'])->where('path', '.*');;
+Route::Delete('delete-application/{id}', [RecruitmentController::class, 'destroyApplication']);
+Route::Post('upload-image-description', [RecruitmentController::class, 'uploadImageDescription']);
+
+Route::get('download-cv/{path}', [RecruitmentController::class, 'downloadCv'])->where('path', '.*');

@@ -709,7 +709,6 @@ ul {
     -webkit-line-clamp: 2;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 100%;
 }
 
 .news-list-item .title:hover{
@@ -733,7 +732,6 @@ ul {
     -webkit-line-clamp: 3;
     overflow: hidden;
     text-overflow: ellipsis;
-    height: 100%;
 }
 .news-banner{
     width: 100%;

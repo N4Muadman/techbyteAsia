@@ -45,13 +45,13 @@ class PagesController extends Controller
         return redirect()->back()->with('success', 'Send contact successfully');
     }
     public function recruitment(){
-        $recruitments = Recruitment::where('show', 1)->where('expiration_date', '>=', today())->get();
+        $recruitments = Recruitment::with('application')->where('show', 1)->where('expiration_date', '>=', today())->get();
 
         return view('pages.recruitment', compact('recruitments'));
     }
 
     public function recruitmentDetail($id){
-        $recruitment = Recruitment::where('id', $id)->where('show', 1)->where('expiration_date', '>=', today())->first();
+        $recruitment = Recruitment::with('application')->where('id', $id)->where('show', 1)->where('expiration_date', '>=', today())->first();
         if(!$recruitment){
             return view('pages.404');
         }

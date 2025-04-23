@@ -16,8 +16,8 @@
                     <h2>"We are looking forward to hearing from you"</h2>
                     <p class="address-title">Address</p>
                     <p class="name-company"><span><i class="far fa-building"></i> </span>TECHBYTE TECHNOLOGY INVESTMENT COMPANY LIMITED</p>
-                    <p class="address"><span><i class="fas fa-map-marker-alt"></i> </span>House number 10, Row H, Da Sy Police Complex, Kien Hung Ward, Ha Dong District, Hanoi
-                        City, Vietnam</p>
+                    <p class="address"><span><i class="fas fa-map-marker-alt"></i> </span>Head office: No. 10, Block H, Da Sy Police Housing Complex, Kien Hung Ward, Ha Dong District, Hanoi City, Vietnam</p>
+                    <p class="address"><span><i class="fas fa-map-marker-alt"></i> </span>Transaction office: House 2B, 110 Nguyen Hoang Ton Street, Xuan La, Tay Ho, Hanoi</p>
                     <p class="phone-number"><span><i class="fas fa-phone"></i> </span><a href="tell:0973454140"> (+84) 973.454.140</a></p>
                     <p class="email"><span><i class="far fa-envelope"></i> </span> <a href="mailto:ai@idai.vn">ai@idai.vn</a></p>
                 </div>

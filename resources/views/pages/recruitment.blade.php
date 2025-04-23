@@ -20,6 +20,7 @@
                             <p class="recruit-salary">Salary: {{ $it->salary }}</p>
                             <p class="recruit-time">{{ $it->time }}</p>
                             <p class="recruit-time">Expiration date: {{ $it->expiration_date }}</p>
+                            <p class="recruit-time">{{$it->application->count()}} applicants have applied</p>
                             <a href="{{ route('recruitmentDetail', $it->id) }}" class="btn btn-contact">Apply now</a>
                         </div>
                     </div>
