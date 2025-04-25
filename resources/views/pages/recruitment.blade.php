@@ -13,7 +13,7 @@
         <div class="recruitment-content">
             <h2>To satisfy your passion for programming, test first and create products for millions of users</h2>
             <div class="row justify-content-center mt-5">
-                @foreach ($recruitments as $it)
+                @forelse ($recruitments as $it)
                     <div class="col-12 col-md-4 p-3">
                         <div class="recruit-item">
                             <p class="recruit-position-job">{{ $it->position_job }}</p>
@@ -24,7 +24,10 @@
                             <a href="{{ route('recruitmentDetail', $it->id) }}" class="btn btn-contact">Apply now</a>
                         </div>
                     </div>
-                @endforeach
+
+                @empty
+                    <p class="text-center text-white">There are no jobs available.</p>
+                @endforelse
             </div>
         </div>
     </div>

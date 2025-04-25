@@ -8,6 +8,7 @@ use App\Models\Contact;
 use App\Models\News;
 use App\Models\Portfolio;
 use App\Models\Recruitment;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 use function Laravel\Prompts\alert;
@@ -83,6 +84,7 @@ class PagesController extends Controller
                 'phone_number' => $request->phone_number,
                 'email' => $request->email,
                 'cv_path' => $cvPath,
+                'application_date' => Carbon::now()->format('Y-m-d'),
                 'cover_letter' => $request->cover_letter,
                 'recruitment_id' => $recruitment->id,
             ]);
